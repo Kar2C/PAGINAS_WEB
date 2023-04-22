@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cuarta aplicación</title>
+    <link rel="stylesheet" href="css/cuarta.css">
+</head>
+
+<body>
+    <section class="aplicacionPrincipal">
+        <header >
+            <h1>Materias</h1>
+        </header>
+        <article>
+            <br>
+            <h3>Ingrese su nombre</h3>
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <h3>Ingrese el nombre de la materia</h3>
+            <input type="text" id="materia" placeholder="Nombre materia" required>
+            <h3>Ingrese sus notas</h3>
+            <input type="number" id="nota1" min="0" max="50" placeholder="Nota 1" required>
+            <input type="number" id="nota2" min="0" max="50" placeholder="Nota 2" required>
+            <input type="number" id="nota3" min="0" max="50" placeholder="Nota 3" required> <br> <br>
+            <input type="button" value="Guardar información" onclick="promedio()">
+            <br><br>
+        </article>
+        <p id="respuesta"></p>
+        <footer>
+            <h4>Cuarta aplicación</h4>
+        </footer>
+    </section>
+    <script src="js/nota.js"></script>
+</body>
+</html>
