@@ -4,23 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Tercera aplicación</title>
-    <script>
-        const intro = alert('Esta aplicación calcula si eres mayor o menor de edad, presiona aceptar para continuar')
-        const nombre = parseInt(prompt('Por favor ingrese su nombre'))
-        const edad = parseInt(prompt('Por favor ingrese su edad'))
-        if (edad >= 18) {
-            alert(nombre+ " eres mayor de edad");
-        
-        }else if (edad <= 17) {
-            alert(nombre + ' eres menor de edad');
-        } else {
-            alert("No es un caracter valido")
-        }
-    </script>
+    <link rel="stylesheet" href="css/tercera.css">
 </head>
 
 <body>
-    <h2>Gracias por usar esta app</h2>
+    <section class="aplicacionPrincipal">
+        <header >
+            <h1>Edades</h1>
+        </header>
+        <article>
+            <br>
+            <h3>Ingrese su nombre y su edad</h3>
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="text" id="edad" placeholder="Edad" required>
+            <input type="button" value="Guardar" onclick="validar()">
+            <br><br>
+        </article>
+        <p id="respuesta"></p>
+        <footer>
+            <h4>Tercera aplicación</h4>
+        </footer>
+    </section>
+    <script src="js/edades.js"></script>
+    
 </body>
-
 </html>
