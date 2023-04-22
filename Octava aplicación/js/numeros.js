@@ -7,22 +7,18 @@ function validacion() {
     const enteros = numerosGuardados.filter(numero => numero % 1 != 0);
 
     if (pares.lenght != 0) {
-        respuesta.innerHTML = "<font color=red> Los números pares que usted ingreso son: </font>" + pares.join(", ");
-    } else {
-        respuesta.innerHTML = "No existen números pares en los que usted ingreso";
-    }
+        respuesta.innerHTML = "<font color=blue> Es un número par: </font>" + pares.join(", ");
+    } 
     if (impares.length != 0) {
         for (index = 0; index < impares.length; index++) {
             if (isNaN(impares[index])) {
                 impares[index] = " ";
             }
         }
-        segResult.innerHTML = "<font color=green>Los números impares que usted ingreso son: </font>" + impares.join(", ");
-    } else {
-        segResult.innerHTML = "No hay números impares en los que usted ingreso"
-    }
+        segResult.innerHTML = "<font color=green> Es un número impar: </font>" + impares.join(", ");
+    } 
     if (enteros.lenght != 0) {
-        terResult.innerHTML = "<font color=blue> No hay números enteros </font>" + enteros.join(", ");
+        terResult.innerHTML = "<font color=red> No es un número entero </font>" + enteros.join(", ");
     }
 }
 
