@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Octava aplicación</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <section class="aplicacionPrincipal">
+        <header >
+            <h1 class="colorTitulo">Números pares e impares</h1>
+        </header>
+        <article>
+            <br>
+            <label>Esta aplicación permite al usuario conocer cuales de los números que ingreso son pares, impares o
+                invalidos
+            </label> 
+            <br>
+            <h3>Para probar por favor ingrese números separados por una coma...</h3>
+            <br>
+            <input class="texto" type="text" id="numero" placeholder="Ingrese los números" required>
+            <input type="button" value="Guardar" onclick="validacion()">
+            <br><br>
+        </article>
+        <footer>
+            <h4>Octava aplicación</h4>
+        </footer>
+        <p id="respuesta"></p>
+        <p id="segResult"></p>
+        <p id="terResult"></p>
+    </section>
+    <script> src="numeros.js"</script>
+</body>
+
+</html>
