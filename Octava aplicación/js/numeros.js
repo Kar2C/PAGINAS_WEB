@@ -2,12 +2,12 @@ function validacion() {
 
     const numeros = document.getElementById("numero").value;
     const numerosGuardados = numeros.split(",");
-    const pares = numerosGuardados.filter(numero => numero % 2 == 0);
-    const impares = numerosGuardados.filter(numero => numero % 2 != 0);
+    const pares = numerosGuardados.filter(numero => numero % 2 == 0 && numero % 1 == 0);
+    const impares = numerosGuardados.filter(numero => (numero % 2 != 0 && numero % 1 == 0));
     const enteros = numerosGuardados.filter(numero => numero % 1 != 0);
 
     if (pares.lenght != 0) {
-        respuesta.innerHTML = "<font color=blue> Es un número par: </font>" + pares.join(", ");
+        respuesta.innerHTML = pares.join(", ") + "<font color=blue> son un número par </font>";
     } 
     if (impares.length != 0) {
         for (index = 0; index < impares.length; index++) {
@@ -15,10 +15,10 @@ function validacion() {
                 impares[index] = " ";
             }
         }
-        segResult.innerHTML = "<font color=green> Es un número impar: </font>" + impares.join(", ");
+        segResult.innerHTML = impares.join(", ")  +"<font color=green> son un número impar </font>" ;
     } 
     if (enteros.lenght != 0) {
-        terResult.innerHTML = "<font color=red> No es un número entero </font>" + enteros.join(", ");
+        terResult.innerHTML = enteros.join(", ") + "<font color=red> no son un número entero </font>" ;
     }
 }
 
